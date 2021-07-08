@@ -40,3 +40,6 @@ lerna-debug.log*
 
 # Docker
 /.docker/dbdata
+.docker/dbdata/pg_stat_tmp/db_0.stat
+.docker/dbdata/pg_stat_tmp/db_13067.stat
+.docker/dbdata/pg_stat_tmp/global.stat
