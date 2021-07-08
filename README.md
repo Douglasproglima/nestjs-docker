@@ -2,37 +2,64 @@
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo_text.svg" width="320" alt="Nest Logo" /></a>
 </p>
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+<h1 align="center">
+🚧 API RESTful com Nestjs | Em Construção 🚧
+</h1>
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
+<p align="center">
+  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/Douglasproglima/nestjs-docker">
+
+  <img alt="Repository size" src="https://img.shields.io/github/repo-size/Douglasproglima/nestjs-docker">
+
+  <a href="https://github.com/Douglasproglima/nestjs-docker/commits/main">
+    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/Douglasproglima/nestjs-docker">
+  </a>
+
+  <a href="https://github.com/Douglasproglima/nestjs-docker/issues">
+    <img alt="Repository issues" src="https://img.shields.io/github/issues/Douglasproglima/nestjs-docker">
+  </a>
+
+  <img alt="License" src="https://img.shields.io/badge/license-MIT-brightgreen">
 </p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
 
-## Description
+<p align="center">
+  <a href="#-projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-layout">Layout</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#rocket-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#rocket-executando">Docker e Docker-compose</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#memo-licença">Licença</a>
+</p>
+<br>
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+## 💻 Projeto
+---
 
-## Installation
+[Nest](https://github.com/nestjs/nest) Simples API cujo objetivo é analisar as funcionalidades básicas e dockerizando a aplicação.
 
+## 🎨 Layout
+---
+![Fluxo](./github/2.png)
+
+## 🎒 Aprendizados
+---
+
+- Framework Nestjs
+- Conceitos básicos do framework
+- Docker + Containers
+
+## Dockerfile e Docker-compose
+---
 ```bash
-$ npm install
+# Antes de rodar o comando docker-compose up -docker
+# É necessário executar pelo ao menos 1 vez no terminal:
+$ chmod +x .docker/entrypoint.sh
+
+# Em seguida execute:
+$ docker-compose up -d
 ```
 
-## Running the app
+## Executar
+---
 
 ```bash
 # development
@@ -44,8 +71,8 @@ $ npm run start:dev
 # production mode
 $ npm run start:prod
 ```
-
-## Test
+## Teste
+---
 
 ```bash
 # unit tests
@@ -58,16 +85,9 @@ $ npm run test:e2e
 $ npm run test:cov
 ```
 
-## Support
-
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
 ## License
+---
 
 Nest is [MIT licensed](LICENSE).
+
+Feito com ❤️ por Douglas Lima <img src="https://raw.githubusercontent.com/Douglasproglima/douglasproglima/master/gifs/Hi.gif" width="30px"></h2> [Entre em contato!](https://www.linkedin.com/in/douglasproglima)
