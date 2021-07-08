@@ -60,8 +60,50 @@ $ docker-compose up -d
 
 ## Executar
 ---
-
+### Comandos do framework
 ```bash
+# Cria uma pasta com o nome do controller/arquivo.ts
+$ nest generate controller Product
+
+# Add a pasta do controller acima o novo file de service
+$ nest generate service Product
+
+# Gera toda a estrutura de endpoints de um GRUD
+$ nest generate resources
+
+# Após responder as perguntas básicas do consoles
+# Será gerado a seguinte estrutura:
+# > Pasta: products
+#   > Pasta: dto (Dados recebidos pela requisição e que será modelado de acordo com o queremos)
+#   > Arquivo: entities (Local onde fica o mapeamento do DB)
+#   > Arquivo: controller
+#   > Arquivo: module
+#   > Arquivo: service
+```
+
+### Comando de instalação
+```bash
+# Instalar a lib TypeORM para realizar o mapeamento do DB
+$ npm install typeorm --save
+
+$ npm install @nestjs/typeorm --save
+
+# Necessário para configurara as variaveis do .env e passar para o module do typeORM
+$ npm install @nestjs/config --save
+
+# Instalar a lib referente ao DB
+$ npm install pg --save
+
+
+# CLI do typeORM:
+# Parametros do CLI: npm run typeorm <parametros>
+$ npm run typeorm migration:create -- -n nome-da-migration
+
+# Configurar o arquivo gerado com o nome da tabela, colunas e tipos de dados.
+
+# Após criar o arquivo de migration, executar:
+$ npm run typeorm migration:run
+
 # development
 $ npm run start
 
@@ -71,7 +113,7 @@ $ npm run start:dev
 # production mode
 $ npm run start:prod
 ```
-## Teste
+### Teste
 ---
 
 ```bash

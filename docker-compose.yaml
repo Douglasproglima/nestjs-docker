@@ -3,7 +3,10 @@ version: '3'
 services:
   app:
     build: .
-    # É necessário executar pelo ao menos 1 vez no terminal: chmod +x .docker/entrypoint.sh
+    # 1 - É necessário executar pelo ao menos 1 vez no terminal: chmod +x .docker/entrypoint.sh
+    # 2 - No momento que levantar o container do app e o container do DB, pode haver discrepancia do time entre eles.
+    # Então, o dockerize tenta se comunicar durante 40s com o container do DB até levante primeiro o container DB 
+    # para depois o container do app levantar e por assim se comunicar com os dados do container DB.
     entrypoint: dockerize -wait tcp://db:5432 -timeout 40s ./.docker/entrypoint.sh
     container_name: nestjs-api-app
     ports:
