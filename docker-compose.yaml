@@ -1,0 +1,25 @@
+version: '3'
+
+services:
+  app:
+    build: .
+    # É necessário executar pelo ao menos 1 vez no terminal: chmod +x .docker/entrypoint.sh
+    entrypoint: dockerize -wait tcp://db:5432 -timeout 40s ./.docker/entrypoint.sh
+    container_name: nestjs-api-app
+    ports:
+      - 3000:3000
+    volumes:
+      - .:/home/node/app
+    depends_on: 
+      - db
+
+  db:
+    build: .docker/postgres
+    container_name: nestjs-api-db
+    restart: always
+    tty: true
+    environment:
+      - POSTGRES_PASSWORD=root
+      - POSTGRES_DB=store
+    volumes:
+      - .docker/dbdata:/var/lib/postgresql/data
