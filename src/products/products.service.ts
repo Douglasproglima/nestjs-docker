@@ -27,12 +27,24 @@ export class ProductsService {
     return this.productRepo.findOne(id);
   }
 
-  update(id: number, updateProductDto: UpdateProductDto) {
-    return `This action updates a #${id} product`;
+  async update(id: number, updateProductDto: UpdateProductDto) {
+    const updateData = await this.productRepo.update(id, updateProductDto);
+    if (!updateData.affected) throw new EntityNotFoundError(Product, id);
+
+    return this.productRepo.findOne(id);
+  }
+
+  async updatePartial(id: number, updateProductDto: UpdateProductDto) {
+    const updateData = await this.productRepo.update(id, updateProductDto);
+    if (!updateData.affected) throw new EntityNotFoundError(Product, id);
+
+    return this.productRepo.findOne(id);
   }
 
   async remove(id: number) {
     const deleteResult = await this.productRepo.delete(id);
-    if (!deleteResult.affected) throw new EntityNotFoundError(Product, id);
+    if (!deleteResult.affected) {
+      throw new EntityNotFoundError(Product, id);
+    }
   }
 }

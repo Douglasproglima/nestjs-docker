@@ -39,4 +39,4 @@ lerna-debug.log*
 .env.production
 
 # Docker
-.docker/dbdata/*
+.docker/*
