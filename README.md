@@ -89,7 +89,6 @@ $ nest generate resources
 ```bash
 # Instalar a lib TypeORM para realizar o mapeamento do DB
 $ npm install typeorm --save
-
 $ npm install @nestjs/typeorm --save
 
 # Necessário para configurara as variaveis do .env e passar para o module do typeORM
@@ -98,6 +97,8 @@ $ npm install @nestjs/config --save
 # Instalar a lib referente ao DB
 $ npm install pg --save
 
+# Lib necessária para validar os dados tratados na camada dto
+$ npm install class-validator class-transformer --save
 
 # CLI do typeORM:
 # Parametros do CLI: npm run typeorm <parametros>

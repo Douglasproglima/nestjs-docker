@@ -12,6 +12,7 @@ import {
 import { ProductsService } from './products.service';
 import { CreateProductDto } from './dto/create-product.dto';
 import { UpdateProductDto } from './dto/update-product.dto';
+import { ValidationPipe } from '@nestjs/common';
 
 @Controller('products')
 export class ProductsController {
@@ -19,7 +20,10 @@ export class ProductsController {
 
   @HttpCode(201)
   @Post()
-  create(@Body() createProductDto: CreateProductDto) {
+  create(
+    @Body(new ValidationPipe({ errorHttpStatusCode: 422 }))
+    createProductDto: CreateProductDto,
+  ) {
     return this.productsService.create(createProductDto);
   }
 
@@ -37,7 +41,11 @@ export class ProductsController {
 
   //@Patch(':id'): PUT -> Atualização Completa e o Patch -> Atualização Parcial
   @Patch(':id')
-  update(@Param('id') id: string, @Body() updateProductDto: UpdateProductDto) {
+  update(
+    @Param('id') id: string,
+    @Body(new ValidationPipe({ errorHttpStatusCode: 422 }))
+    updateProductDto: UpdateProductDto,
+  ) {
     return this.productsService.update(+id, updateProductDto);
   }
 
