@@ -40,6 +40,10 @@
 ---
 ![Fluxo](./github/2.png)
 
+## Endpoints
+---
+
+[Documentação Postman](https://documenter.getpostman.com/view/2433434/Tzm6kFVZ)
 ## 🎒 Aprendizados
 ---
 
