@@ -40,14 +40,5 @@ lerna-debug.log*
 
 # Docker
 .docker/dbdata/*
-.docker/
-.gitignore
-.docker/dbdata/postmaster.pid
-.docker/dbdata/base/13067/pg_internal.init
-.docker/dbdata/base/16384/1249
-.docker/dbdata/global/pg_control
-.docker/dbdata/global/pg_internal.init
-.docker/dbdata/pg_stat_tmp/db_0.stat
-.docker/dbdata/pg_stat_tmp/db_13067.stat
-.docker/dbdata/pg_stat_tmp/global.stat
-.docker/dbdata/pg_wal/000000010000000000000001
+/.docker/dbdata/*
+.docker/dbdata/*
