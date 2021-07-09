@@ -18,6 +18,7 @@ import { ProductsModule } from './products/products.module';
       password: process.env.TYPEORM_PASSWORD,
       database: process.env.TYPEORM_DATABASE,
       entities: [process.env.TYPEORM_ENTITIES],
+      synchronize: [process.env.TYPEORM_SYNCHRONIZE] as any,
     }),
   ],
   controllers: [AppController],

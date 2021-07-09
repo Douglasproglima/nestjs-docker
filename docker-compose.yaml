@@ -13,6 +13,8 @@ services:
       - 3000:3000
     volumes:
       - .:/home/node/app
+    # Olhar o inicio do container db, mas não significa que o postgreSQL está totalmente levantado.
+    # por isso a necessidade do entrypoint
     depends_on: 
       - db
 
